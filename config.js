@@ -1,41 +1,44 @@
+Dưới đây là file `config.js` của bạn đã được dịch toàn bộ các chú thích (comment) và nội dung văn bản (text) sang tiếng Việt để bạn có thể dễ dàng sử dụng:
+
+```javascript
 /**
- * ✨ EDIT THIS FILE to customize the birthday greeting! ✨
+ * ✨ CHỈNH SỬA FILE NÀY để tùy biến lời chúc sinh nhật! ✨
  *
- * This is the ONLY file you need to modify.
- * No need to touch HTML, CSS, or any other JavaScript files.
+ * Đây là file DUY NHẤT bạn cần thay đổi.
+ * Không cần đụng đến HTML, CSS hay bất kỳ file JavaScript nào khác.
  *
- * AVAILABLE SECTION TYPES:
- *   "greeting"      → Opening greeting with recipient's name
- *   "announcement"  → Birthday announcement text
- *   "chatbox"       → Chat message with typing animation
- *   "ideas"         → Sequential text reveals, one by one
- *   "quote"         → Styled quote card with optional author
- *   "countdown"     → Animated 3-2-1 countdown
- *   "stars"         → Twinkling stars background
- *   "fireworks"     → Colorful firework sparks burst
- *   "balloons"      → Floating balloon animation
- *   "profile"       → Profile photo with birthday wish
- *   "confetti"      → Confetti burst animation
- *   "closing"       → Closing message with replay button
+ * CÁC LOẠI PHÂN ĐOẠN CÓ SẴN (SECTION TYPES):
+ * "greeting"      → Lời chào mở đầu với tên người nhận
+ * "announcement"  → Câu thông báo sinh nhật
+ * "chatbox"       → Tin nhắn chat với hiệu ứng gõ chữ
+ * "ideas"         → Các dòng chữ xuất hiện lần lượt
+ * "quote"         → Khung trích dẫn được tạo kiểu (tùy chọn tác giả)
+ * "countdown"     → Đếm ngược 3-2-1 có hiệu ứng
+ * "stars"         → Nền sao lấp lánh
+ * "fireworks"     → Pháo hoa nhiều màu sắc
+ * "balloons"      → Hiệu ứng bóng bay bay lên
+ * "profile"       → Ảnh đại diện kèm lời chúc sinh nhật
+ * "confetti"      → Hiệu ứng nổ pháo giấy
+ * "closing"       → Lời kết kèm nút xem lại
  *
- * HOW TO USE:
- *   REMOVE a section  → Delete its object from the sections array
- *   DUPLICATE          → Copy-paste any section object
- *   REORDER            → Move the section object up/down in the array
- *   EDIT TEXT          → Change the string values
+ * CÁCH SỬ DỤNG:
+ * XÓA phân đoạn       → Xóa object của nó khỏi mảng sections
+ * NHÂN ĐÔI            → Copy và paste một object phân đoạn bất kỳ
+ * ĐỔI THỨ TỰ          → Di chuyển object phân đoạn lên/xuống trong mảng
+ * SỬA CHỮ             → Thay đổi giá trị của các chuỗi text
  */
 
 const CONFIG = {
-  // ── Recipient Info ────────────────────────────────────────────
+  // ── Thông tin người nhận ──────────────────────────────────────
   name: "Irene",
-  photo: "./img/irene.jpg",       // Place your photo in the img/ folder
-  music: "./music/hbd.mpeg",      // Place your music in the music/ folder
+  photo: "./img/irene.jpg",       // Đặt ảnh của bạn vào thư mục img/
+  music: "./music/hbd.mpeg",      // Đặt nhạc của bạn vào thư mục music/
 
-  // ── Theme Colors ──────────────────────────────────────────────
-  // A toggle button lets the viewer switch between dark & light mode.
+  // ── Màu sắc giao diện (Theme Colors) ──────────────────────────
+  // Một nút bấm giúp người xem chuyển đổi giữa chế độ tối & sáng.
   colors: {
-    primary: "#f472b6",           // Main accent color (rose pink)
-    accent: "#60a5fa",            // Secondary accent color (sky blue)
+    primary: "#f472b6",           // Màu nhấn chính (hồng phấn)
+    accent: "#60a5fa",            // Màu nhấn phụ (xanh da trời)
     dark: {
       background: "#0f172a",      // Slate 900
       text: "#f1f5f9",            // Slate 100
@@ -46,47 +49,47 @@ const CONFIG = {
     },
   },
 
-  // ── Default Color Mode ────────────────────────────────────────
-  // Options: "dark" or "light"
+  // ── Chế độ màu mặc định ───────────────────────────────────────
+  // Tùy chọn: "dark" (tối) hoặc "light" (sáng)
   defaultMode: "dark",
 
-  // ── Sections ──────────────────────────────────────────────────
-  // Add, remove, duplicate, or reorder as you wish!
+  // ── Các phân đoạn nội dung (Sections) ─────────────────────────
+  // Thêm, xóa, nhân đôi, hoặc đổi thứ tự tùy thích!
   sections: [
     {
       type: "greeting",
-      title: "Hi",
-      subtitle: "I really like your name btw!",
+      title: "Chào cậu",
+      subtitle: "Tớ rất thích cái tên này của cậu đấy!",
     },
     {
       type: "countdown",
-      from: 3,                    // Countdown from this number
-      goText: "🎉",              // Text shown after countdown ends
+      from: 3,                    // Đếm ngược từ số này
+      goText: "🎉",               // Ký tự hiển thị sau khi đếm xong
     },
     {
       type: "announcement",
-      text: "It's your birthday!! :D",
+      text: "Hôm nay là sinh nhật của cậu!! :D",
     },
     {
       type: "chatbox",
       message:
-        "Happy birthday to youu!! Wishing you a wonderful year ahead filled with joy, love, and endless happiness!",
-      buttonText: "Send",
+        "Chúc mừng sinh nhật cậu nhé!! Chúc cậu một tuổi mới thật tuyệt vời, ngập tràn niềm vui, tình yêu và hạnh phúc viên mãn!",
+      buttonText: "Gửi",
     },
     {
       type: "ideas",
       lines: [
-        "That's what I was going to do.",
-        "But then I stopped.",
-        "I realised, I wanted to do something <strong>special</strong>.",
-        "Because,",
-        "You are Special <span>:)</span>",
+        "Đó là những gì tớ định làm.",
+        "Nhưng rồi tớ khựng lại.",
+        "Tớ nhận ra, tớ muốn làm một điều gì đó <strong>đặc biệt</strong> hơn.",
+        "Bởi vì,",
+        "Cậu là một người rất Đặc biệt <span>:)</span>",
       ],
       bigLetters: "SO",
     },
     {
       type: "quote",
-      text: "The more you praise and celebrate your life, the more there is in life to celebrate.",
+      text: "Càng ngợi ca và trân trọng cuộc sống, bạn sẽ càng có nhiều điều để ăn mừng trong đời.",
       author: "Oprah Winfrey",
     },
     {
@@ -99,8 +102,8 @@ const CONFIG = {
     },
     {
       type: "profile",
-      wishTitle: "Happy Birthday!",
-      wishText: "May the js.prototypes always be with you! ;)",
+      wishTitle: "Chúc Mừng Sinh Nhật!",
+      wishText: "Mong rằng js.prototypes sẽ luôn ở bên cậu! ;)", // Giữ nguyên câu đùa của dân lập trình JS
     },
     {
       type: "fireworks",
@@ -112,8 +115,10 @@ const CONFIG = {
     },
     {
       type: "closing",
-      text: "Okay, now come back and tell me if you liked it.",
-      replayText: "Or click, if you want to watch it again.",
+      text: "Xong rồi đó, giờ thì quay lại và nói cho tớ biết cậu có thích không nhé.",
+      replayText: "Hoặc bấm vào đây nếu cậu muốn xem lại lần nữa.",
     },
   ],
 };
+
+```
